@@ -1,4 +1,4 @@
-            - name: Azure Blob Storage Upload
+name: Azure Blob Storage Upload
   # You may pin to the exact commit or the version.
   # uses: bacongobbler/azure-blob-storage-upload@50f7d898b7697e864130ea04c303ca38b5751c50
   uses: bacongobbler/azure-blob-storage-upload@v3.0.0
