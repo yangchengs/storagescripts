@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: bacongobbler/azure-blob-storage-upload@main
         with:
-          source_dir: _dist
+          source_dir: test1
           container_name: container1
           connection_string: ${{ secrets.ConnectionString }}
           # WARNING: this will overwrite existing blobs in your blob storage
