@@ -26,8 +26,6 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y azcopy
         rm -f packages-microsoft-prod.deb
-        pwd
-        sudo find / -name "azcopy"
         azcopy -v
     
     - name: Copy file to Azure Blob Storage
@@ -35,7 +33,7 @@ jobs:
         AZURE_STORAGE_ACCOUNT: yangshensa98i1
         AZURE_CONTAINER_NAME: container2
         AZCOPY_AUTO_LOGIN_TYPE: AZCLI
-        AZCOPY_TENANT_ID: ${{ secrets.AZURE_CREDENTIALS.tenantId }}
+        AZCOPY_TENANT_ID: 16b3c013-d300-468d-ac64-7eda0820b6d3
       run: |
         azcopy sync "." "https://$AZURE_STORAGE_ACCOUNT.blob.core.windows.net/$AZURE_CONTAINER_NAME/"
         
