@@ -21,4 +21,4 @@ jobs:
       with:
         azcliversion: 2.30.0
         inlineScript: |
-          az storage blob sync -c "container2" --account-name "yangshensa98i1" --account-key ${{ secrets.ConnectionString }} --source test1
+          az storage blob sync -c "container2" --account-name "yangshensa98i1" --source "test1" --account-key ${{ secrets.ConnectionString }} 
