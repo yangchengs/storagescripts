@@ -27,7 +27,7 @@ jobs:
         sudo apt-get install -y azcopy
         rm -f packages-microsoft-prod.deb
         pwd
-        find / -name "azcopy"
+        sudo find / -name "azcopy"
         
 
     - name: Azure CLI script file
