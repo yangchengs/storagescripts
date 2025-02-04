@@ -18,15 +18,8 @@ jobs:
 
     - name: Install azcopy
       run: |
-        sudo apt-get update
-        sudo apt-get install -y wget
-        # when ubuntu-latest changes this needs updating from 22.04
-        wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb
-        sudo dpkg -i packages-microsoft-prod.deb
-        sudo apt-get update
-        sudo apt-get install -y azcopy
-        rm -f packages-microsoft-prod.deb
-        azcopy -v
+        tar -xvzf ./azcopy/azcopy_linux_arm64_10.28.0.tar.gz
+        sudo find / -name 'azcopy' 
     
     - name: Copy file to Azure Blob Storage
       env:
@@ -35,6 +28,6 @@ jobs:
         AZCOPY_AUTO_LOGIN_TYPE: AZCLI
         AZCOPY_TENANT_ID: 16b3c013-d300-468d-ac64-7eda0820b6d3
       run: |
-        azcopy sync "." "https://$AZURE_STORAGE_ACCOUNT.blob.core.windows.net/$AZURE_CONTAINER_NAME/"
+        azcopy sync "test1" "https://$AZURE_STORAGE_ACCOUNT.blob.core.windows.net/$AZURE_CONTAINER_NAME/"
         
         
