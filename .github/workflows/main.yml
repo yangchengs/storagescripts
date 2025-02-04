@@ -19,6 +19,6 @@ jobs:
     - name: Azure CLI script file
       uses: azure/cli@v2
       with:
-        azcliversion: 2.30.0
+        azcliversion: 2.68.0
         inlineScript: |
           az storage blob sync -c "container2" --account-name "yangshensa98i1" --source "test1" --account-key ${{ secrets.ConnectionString }} 
