@@ -27,6 +27,8 @@ jobs:
         sudo apt-get install -y azcopy
         rm -f packages-microsoft-prod.deb
         pwd
+        ls
+        
 
     - name: Azure CLI script file
       uses: azure/cli@v2
