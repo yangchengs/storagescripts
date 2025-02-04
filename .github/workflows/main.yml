@@ -23,7 +23,7 @@ jobs:
         AZCOPY_AUTO_LOGIN_TYPE: AZCLI
         AZCOPY_TENANT_ID: 16b3c013-d300-468d-ac64-7eda0820b6d3
       run: |
-        sudo find . -name "azcopy"
+        sudo find / -name "azcopy"
         azcopy sync "test1" "https://$AZURE_STORAGE_ACCOUNT.blob.core.windows.net/$AZURE_CONTAINER_NAME/"
         
         
