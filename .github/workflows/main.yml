@@ -15,12 +15,7 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@v4
-
-    - name: Install azcopy
-      run: |
-        tar -xvzf ./azcopy/azcopy_linux_arm64_10.28.0.tar.gz
-        sudo find / -name 'azcopy' 
-    
+   
     - name: Copy file to Azure Blob Storage
       env:
         AZURE_STORAGE_ACCOUNT: yangshensa98i1
