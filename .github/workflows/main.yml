@@ -29,5 +29,14 @@ jobs:
         pwd
         sudo find / -name "azcopy"
         azcopy -v
+    
+    - name: Copy file to Azure Blob Storage
+        env:
+          AZURE_STORAGE_ACCOUNT: yangshensa98i1
+          AZURE_CONTAINER_NAME: container2
+          AZCOPY_AUTO_LOGIN_TYPE: AZCLI
+          AZCOPY_TENANT_ID: ${{ secrets.AZURE_CREDENTIALS.tenantId }}
+        run: |
+          azcopy sync "." "https://$AZURE_STORAGE_ACCOUNT.blob.core.windows.net/$AZURE_CONTAINER_NAME/"
         
         
