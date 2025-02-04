@@ -29,9 +29,7 @@ jobs:
         pwd
         sudo find / -name "azcopy"
         sudo mkdir /root/.azure/bin
-        cd /usr/bin
-        pwd
-        ls
+        
         sudo cp /usr/bin/azcopy /root/.azure/bin/azcopy
         cd /root/.azure/bin
         pwd
