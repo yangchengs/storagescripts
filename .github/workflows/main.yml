@@ -28,16 +28,6 @@ jobs:
         rm -f packages-microsoft-prod.deb
         pwd
         sudo find / -name "azcopy"
-        sudo mkdir /root/.azure/bin
+        azcopy -v
         
-        sudo cp /usr/bin/azcopy /root/.azure/bin/azcopy
-        cd /root/.azure/bin
-        pwd
-        ls
-
-    - name: Azure CLI script file
-      uses: azure/cli@v2
-      with:
-        azcliversion: 2.68.0
-        inlineScript: |
-          az storage blob sync -c "container2" --account-name "yangshensa98i1" --source "test1" --account-key ${{ secrets.ConnectionString }} 
+        
